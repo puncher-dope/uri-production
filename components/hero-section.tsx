@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20 lg:pt-0">
       {/* Background layers */}
       <div className="absolute inset-0 bg-black" />
       <div
