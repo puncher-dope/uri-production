@@ -6,10 +6,10 @@ const footerLinks = [
   {
     title: "Услуги",
     links: [
-      { label: "Подбор авто", href: "#services" },
-      { label: "Доставка", href: "#services" },
-      { label: "Таможенное оформление", href: "#services" },
-      { label: "Диагностика", href: "#services" },
+      { label: "Стратегия и идеи", href: "#services" },
+      { label: "Съёмка и монтаж", href: "#services" },
+      { label: "Упаковка страницы", href: "#services" },
+      { label: "Воронка продаж", href: "#services" },
     ],
   },
   {
@@ -17,7 +17,7 @@ const footerLinks = [
     links: [
       { label: "О нас", href: "#advantages" },
       { label: "Как мы работаем", href: "#process" },
-      { label: "Каталог", href: "#catalog" },
+      { label: "Пакеты", href: "#catalog" },
       { label: "Контакты", href: "#contact" },
     ],
   },
@@ -33,15 +33,15 @@ export default function Footer() {
             <a href="#hero" className="flex items-center gap-3 mb-4">
               <div className="relative w-8 h-8 flex items-center justify-center">
                 <div className="absolute inset-0 bg-red-600 rounded-md rotate-45" />
-                <span className="relative font-bold text-white text-xs">HE</span>
+                <span className="relative font-bold text-white text-xs">UP</span>
               </div>
               <span className="text-lg font-bold text-white tracking-wider">
-                HAN<span className="text-red-500"> EXPORT</span>
+                URI<span className="text-red-500"> PRODUCTION</span>
               </span>
             </a>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Прямой экспорт автомобилей из Южной Кореи в Россию. Надежность,
-              прозрачность и качество сервиса с 2016 года.
+              SMM-агентство полного цикла. Создаём контент, который помогает
+              брендам быть заметными и продавать больше.
             </p>
           </div>
 
@@ -74,11 +74,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <Mail className="w-4 h-4 text-red-500/70" />
-                info@hanexport.ru
+                hello@uri-production.ru
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <MapPin className="w-4 h-4 text-red-500/70" />
-                Korea, ул. korean 57
+                Москва / онлайн
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} HAN EXPORT. Все права защищены.
+            &copy; {new Date().getFullYear()} URI PRODUCTION. Все права защищены.
           </p>
           <a
             href="#hero"

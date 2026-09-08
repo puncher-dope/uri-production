@@ -5,14 +5,14 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'HAN EXPORT — Экспорт автомобилей из Кореи в Россию',
-  description: 'Прямой экспорт автомобилей из Южной Кореи в Россию. Надежная доставка, прозрачные цены, полный сервис оформления.',
-  keywords: 'экспорт автомобилей, импорт машин из Кореи, автомобили из Кореи в Россию, корейские авто, HAN EXPORT',
-  authors: [{ name: 'HAN EXPORT', url: 'https://han-export.ru' }],
+  title: 'URI Production — SMM-агентство полного цикла',
+  description: 'Стратегия, упаковка, съёмка и монтаж видео для брендов, которые хотят расти в социальных сетях.',
+  keywords: 'SMM агентство, контент, продвижение, съёмка видео, URI Production',
+  authors: [{ name: 'URI Production' }],
   viewport: 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://han-export.ru',
+    canonical: 'https://uri-production.ru',
   },
   icons: {
     icon: '/favicon.ico',
@@ -20,25 +20,25 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'HAN EXPORT — Экспорт автомобилей из Кореи в Россию',
-    description: 'Прямой экспорт автомобилей из Южной Кореи в Россию. Надежная доставка, прозрачные цены.',
+    title: 'URI Production — SMM-агентство полного цикла',
+    description: 'Контент, который продаёт.',
     type: 'website',
     locale: 'ru_RU',
-    url: 'https://han-export.ru',
+    url: 'https://uri-production.ru',
     images: [
       {
-        url: 'https://han-export.ru/og-image.jpg',
+        url: 'https://uri-production.ru/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'HAN EXPORT — Экспорт автомобилей из Кореи',
+        alt: 'URI Production — SMM-агентство',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HAN EXPORT — Экспорт автомобилей из Кореи в Россию',
-    description: 'Прямой экспорт автомобилей из Южной Кореи в Россию',
-    images: ['https://han-export.ru/og-image.jpg'],
+    title: 'URI Production — SMM-агентство полного цикла',
+    description: 'Контент, который продаёт',
+    images: ['https://uri-production.ru/og-image.jpg'],
   },
 };
 
@@ -54,9 +54,9 @@ export default function RootLayout({
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            'name': 'HAN EXPORT',
-            'url': 'https://han-export.ru',
-            'description': 'Экспорт автомобилей из Кореи в Россию',
+            'name': 'URI Production',
+            'url': 'https://uri-production.ru',
+            'description': 'SMM-агентство полного цикла',
             'sameAs': [],
             'contactPoint': {
               '@type': 'ContactPoint',

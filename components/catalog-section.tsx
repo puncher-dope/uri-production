@@ -2,63 +2,43 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Eye, ChevronRight } from "lucide-react";
+import { Check, ChevronRight } from "lucide-react";
 
-const cars = [
+const packages = [
   {
-    name: "Hyundai Sonata",
-    year: "2023",
-    price: "от 2 100 000 ₽",
-    image: "https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Популярный",
+    name: "Базовый минимум",
+    period: "1 месяц",
+    price: "2.500.000₽",
+    monthly: "130.000₽",
+    tag: "5 видео",
+    features: ["Полная упаковка страницы", "Видео по готовому сценарию заказчика", "Съёмка + монтаж", "Предоставляем актёра / модель"],
   },
   {
-    name: "Kia Sorento",
-    year: "2024",
-    price: "от 3 200 000 ₽",
-    image: "https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Новинка",
+    name: "Золотая середина",
+    period: "1 месяц",
+    price: "3.700.000₽",
+    monthly: "196.000₽",
+    tag: "8 видео",
+    features: ["Полная упаковка страницы", "Построение воронки продаж", "Написание сценариев и генерация идей", "Монтаж + съёмка", "Предоставляем актёра / модель"],
   },
   {
-    name: "Genesis G80",
-    year: "2024",
-    price: "от 5 500 000 ₽",
-    image: "https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Премиум",
-  },
-  {
-    name: "Hyundai Tucson",
-    year: "2023",
-    price: "от 2 800 000 ₽",
-    image: "https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Кроссовер",
-  },
-  {
-    name: "Kia K5",
-    year: "2024",
-    price: "от 2 400 000 ₽",
-    image: "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Седан",
-  },
-  {
-    name: "Genesis GV70",
-    year: "2024",
-    price: "от 6 100 000 ₽",
-    image: "https://images.pexels.com/photos/39855/lamborghini-countach-drive-automobile-39855.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tag: "Премиум",
+    name: "Роскошный максимум",
+    period: "1 месяц",
+    price: "5.500.000₽",
+    monthly: "290.000₽",
+    tag: "12 видео",
+    features: ["Полная упаковка страницы", "Построение воронки продаж", "Написание сценариев и генерация идей", "Монтаж + съёмка", "Предоставляем актёра / модель"],
   },
 ];
 
-const tabs = ["Все", "Седан", "Кроссовер", "Премиум"];
+const tabs = ["Все пакеты", "1 месяц"];
 
 export default function CatalogSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeTab, setActiveTab] = useState("Все");
+  const [activeTab, setActiveTab] = useState("Все пакеты");
 
-  const filtered = activeTab === "Все"
-    ? cars
-    : cars.filter((c) => c.tag === activeTab);
+  const filtered = packages;
 
   return (
     <section id="catalog" className="relative py-24 lg:py-32 overflow-hidden">
@@ -74,13 +54,13 @@ export default function CatalogSection() {
           className="text-center mb-12"
         >
           <span className="text-red-500 text-sm font-semibold tracking-widest uppercase">
-            Каталог
+            Пакеты услуг
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3">
-            Актуальные <span className="text-gradient">предложения</span>
+            Выберите свой <span className="text-gradient">уровень</span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-            Лучшие автомобили из Кореи с полным таможенным оформлением
+            Контент и продвижение для брендов, которым нужен заметный результат
           </p>
         </motion.div>
 
@@ -106,45 +86,28 @@ export default function CatalogSection() {
           ))}
         </motion.div>
 
-        {/* Cars grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((car, i) => (
+        <div className="grid lg:grid-cols-3 gap-6">
+          {filtered.map((pack, i) => (
             <motion.div
-              key={car.name}
+              key={pack.name}
               layout
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl overflow-hidden hover:border-red-600/30 transition-all duration-500"
+              className={`group relative bg-white/[0.03] border rounded-2xl p-6 lg:p-8 hover:border-red-600/50 transition-all duration-500 ${i === 1 ? "border-red-600/50 shadow-xl shadow-red-900/10" : "border-white/[0.06]"}`}
             >
-              <div className="relative h-52 overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
-                  style={{ backgroundImage: `url('${car.image}')` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <span className="absolute top-3 left-3 bg-red-600/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  {car.tag}
-                </span>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                    <Eye className="w-5 h-5 text-white" />
-                  </div>
-                </div>
+              <span className="inline-flex bg-red-600/15 text-red-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">{pack.tag}</span>
+              <h3 className="text-2xl font-semibold text-white mt-5">{pack.name}</h3>
+              <p className="text-gray-500 text-sm mt-1">{pack.period}</p>
+              <ul className="space-y-3 mt-6 min-h-[180px]">
+                {pack.features.map((feature) => <li key={feature} className="flex gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />{feature}</li>)}
+              </ul>
+              <div className="border-t border-white/[0.08] pt-5 mt-5">
+                <div className="text-2xl font-bold text-white">{pack.price}</div>
+                <div className="text-sm text-red-400 mt-1">{pack.monthly} / месяц</div>
               </div>
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-white">{car.name}</h3>
-                  <span className="text-gray-500 text-sm">{car.year}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-red-400 font-semibold">{car.price}</span>
-                  <button className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-1 text-sm">
-                    Подробнее <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
+              <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-medium transition-colors">Обсудить пакет <ChevronRight className="w-4 h-4" /></a>
             </motion.div>
           ))}
         </div>
@@ -159,7 +122,7 @@ export default function CatalogSection() {
             href="#contact"
             className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-medium transition-colors"
           >
-            Не нашли нужную модель? Подберем под ваш запрос
+            Не знаете, какой пакет выбрать? Поможем подобрать решение
             <ChevronRight className="w-4 h-4" />
           </a>
         </motion.div>

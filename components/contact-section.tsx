@@ -52,19 +52,19 @@ export default function ContactSection() {
                 icon: Phone,
                 label: "Телефон",
                 value: "+7 (900) 127-80-47",
-                sublabel: "Бесплатно по России",
+                sublabel: "Пн-Пт: 10:00 — 19:00",
               },
               {
                 icon: Mail,
                 label: "Email",
-                value: "info@hanexport.ru",
-                sublabel: "Ответим за 30 минут",
+                value: "hello@uri-production.ru",
+                sublabel: "Ответим в течение часа",
               },
               {
                 icon: MapPin,
-                label: "Офис",
-                value: "Korea, ул. korean 57, оф. 301",
-                sublabel: "Пн-Пт: 9:00 — 19:00",
+                label: "Формат работы",
+                value: "Москва / онлайн",
+                sublabel: "Работаем по всей России",
               },
             ].map((item) => (
               <div
@@ -85,8 +85,8 @@ export default function ContactSection() {
             <div className="p-5 rounded-xl border border-red-600/20 bg-red-600/[0.05]">
               <div className="text-white font-semibold mb-2">Бесплатная консультация</div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Оставьте заявку и наш менеджер поможет подобрать оптимальный
-                вариант автомобиля под ваш бюджет и пожелания.
+                Оставьте заявку — обсудим вашу задачу, подберём пакет и
+                предложим первые идеи для контента.
               </p>
             </div>
           </motion.div>
@@ -137,22 +137,21 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Марка и модель</label>
+                  <label className="block text-sm text-gray-400 mb-1.5">Компания и ниша</label>
                   <input
                     type="text"
-                    placeholder="Например: Hyundai Sonata 2024"
+                    placeholder="Например: салон красоты, застройщик, эксперт"
                     className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Бюджет</label>
+                  <label className="block text-sm text-gray-400 mb-1.5">Интересующий пакет</label>
                   <select className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-gray-400 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all appearance-none">
-                    <option value="">Выберите бюджет</option>
-                    <option value="1-2m">1 — 2 млн ₽</option>
-                    <option value="2-3m">2 — 3 млн ₽</option>
-                    <option value="3-5m">3 — 5 млн ₽</option>
-                    <option value="5m+">Более 5 млн ₽</option>
+                    <option value="">Выберите пакет</option>
+                    <option value="base">Базовый минимум — 5 видео</option>
+                    <option value="gold">Золотая середина — 8 видео</option>
+                    <option value="max">Роскошный максимум — 12 видео</option>
                   </select>
                 </div>
 

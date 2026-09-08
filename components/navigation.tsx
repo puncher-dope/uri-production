@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, Mail, ChevronRight } from "lucide-react";
 
 const navLinks = [
   { href: "#hero", label: "Главная" },
   { href: "#services", label: "Услуги" },
-  { href: "#catalog", label: "Каталог" },
+  { href: "#catalog", label: "Пакеты" },
   { href: "#advantages", label: "Преимущества" },
   { href: "#contact", label: "Контакты" },
 ];
@@ -39,10 +39,10 @@ export default function Navigation() {
             <a href="#hero" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 flex items-center justify-center">
                 <div className="absolute inset-0 bg-red-600 rounded-lg rotate-45 group-hover:rotate-[50deg] transition-transform duration-500" />
-                <span className="relative font-bold text-white text-sm">HE</span>
+                <span className="relative font-bold text-white text-sm">UP</span>
               </div>
               <div>
-                <span className="text-xl font-bold text-white tracking-wider">HAN<span className="text-red-500"> EXPORT</span></span>
+                <span className="text-xl font-bold text-white tracking-wider">URI<span className="text-red-500"> PRODUCTION</span></span>
               </div>
             </a>
 
@@ -60,15 +60,15 @@ export default function Navigation() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-4">
-              <a href="tel:+79001278047" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
-                <Phone className="w-4 h-4 text-red-500" />
-                <span>+7 (900) 127-80-47</span>
+              <a href="mailto:hello@uri-production.ru" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
+                <Mail className="w-4 h-4 text-red-500" />
+                <span>hello@uri-production.ru</span>
               </a>
               <a
                 href="#contact"
                 className="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-red-600/25 flex items-center gap-1"
               >
-                Оставить заявку <ChevronRight className="w-4 h-4" />
+                Обсудить проект <ChevronRight className="w-4 h-4" />
               </a>
             </div>
 
@@ -107,11 +107,11 @@ export default function Navigation() {
                 </motion.a>
               ))}
               <a
-                href="tel:+79001278047"
+                href="mailto:hello@uri-production.ru"
                 className="flex items-center gap-2 text-gray-300 mt-4"
               >
-                <Phone className="w-5 h-5 text-red-500" />
-                +7 (900) 127-80-47
+                <Mail className="w-5 h-5 text-red-500" />
+                hello@uri-production.ru
               </a>
             </nav>
           </motion.div>
