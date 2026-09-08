@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 0.5,
       },
     ],
-    sitemap: 'https://han-export.ru/sitemap.xml',
+    sitemap: 'https://uri-production.ru/sitemap.xml',
   }
 }

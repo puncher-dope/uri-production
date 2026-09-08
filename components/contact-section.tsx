@@ -51,7 +51,7 @@ export default function ContactSection() {
               {
                 icon: Phone,
                 label: "Телефон",
-                value: "+7 (900) 127-80-47",
+                value: "+82-10-2410-0397",
                 sublabel: "Пн-Пт: 10:00 — 19:00",
               },
               {
@@ -63,8 +63,8 @@ export default function ContactSection() {
               {
                 icon: MapPin,
                 label: "Формат работы",
-                value: "Москва / онлайн",
-                sublabel: "Работаем по всей России",
+                value: "Южная Корея / онлайн",
+                sublabel: "Работаем по всей Южной Корее и онлайн с клиентами по всему миру",
               },
             ].map((item) => (
               <div
@@ -117,8 +117,10 @@ export default function ContactSection() {
               >
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm text-gray-400 mb-1.5">Имя</label>
+                    <label htmlFor="contact-name" className="block text-sm text-gray-400 mb-1.5">Имя</label>
                     <input
+                      id="contact-name"
+                      name="name"
                       required
                       type="text"
                       placeholder="Ваше имя"
@@ -126,19 +128,23 @@ export default function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-gray-400 mb-1.5">Телефон</label>
+                    <label htmlFor="contact-phone" className="block text-sm text-gray-400 mb-1.5">Телефон</label>
                     <input
+                      id="contact-phone"
+                      name="phone"
                       required
                       type="tel"
-                      placeholder="+7 (___) ___-__-__"
+                      placeholder="+82 (___) ___-__-__"
                       className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Компания и ниша</label>
+                  <label htmlFor="contact-company" className="block text-sm text-gray-400 mb-1.5">Компания и ниша</label>
                   <input
+                    id="contact-company"
+                    name="company"
                     type="text"
                     placeholder="Например: салон красоты, застройщик, эксперт"
                     className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all"
@@ -146,8 +152,8 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Интересующий пакет</label>
-                  <select className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-gray-400 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all appearance-none">
+                  <label htmlFor="contact-package" className="block text-sm text-gray-400 mb-1.5">Интересующий пакет</label>
+                  <select id="contact-package" name="package" className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-gray-400 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all appearance-none">
                     <option value="">Выберите пакет</option>
                     <option value="base">Базовый минимум — 5 видео</option>
                     <option value="gold">Золотая середина — 8 видео</option>
@@ -156,8 +162,10 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Комментарий</label>
+                  <label htmlFor="contact-comment" className="block text-sm text-gray-400 mb-1.5">Комментарий</label>
                   <textarea
+                    id="contact-comment"
+                    name="comment"
                     rows={3}
                     placeholder="Дополнительные пожелания..."
                     className="w-full bg-white/[0.04] border border-white/[0.08] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-red-600/50 focus:ring-1 focus:ring-red-600/30 transition-all resize-none"

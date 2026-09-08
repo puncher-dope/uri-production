@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Mail, ChevronRight } from "lucide-react";
+import { Menu, X, Mail, ChevronRight, Moon, Sun } from "lucide-react";
 
 const navLinks = [
   { href: "#hero", label: "Главная" },
@@ -15,12 +15,25 @@ const navLinks = [
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
+    const savedTheme = window.localStorage.getItem("uri-theme");
+    if (savedTheme === "light") {
+      setLightMode(true);
+      document.documentElement.classList.add("light");
+    }
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const nextLightMode = !lightMode;
+    setLightMode(nextLightMode);
+    document.documentElement.classList.toggle("light", nextLightMode);
+    window.localStorage.setItem("uri-theme", nextLightMode ? "light" : "dark");
+  };
 
   return (
     <>
@@ -70,6 +83,15 @@ export default function Navigation() {
               >
                 Обсудить проект <ChevronRight className="w-4 h-4" />
               </a>
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label={lightMode ? "Включить тёмный режим" : "Включить светлый режим"}
+                title={lightMode ? "Тёмный режим" : "Светлый режим"}
+                className="w-10 h-10 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-red-500/50 flex items-center justify-center transition-colors"
+              >
+                {lightMode ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+              </button>
             </div>
 
             <button
@@ -93,6 +115,14 @@ export default function Navigation() {
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-20 lg:hidden"
           >
             <nav className="flex flex-col items-center gap-6 p-8">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              >
+                {lightMode ? <Moon className="w-5 h-5 text-red-500" /> : <Sun className="w-5 h-5 text-red-500" />}
+                {lightMode ? "Тёмный режим" : "Светлый режим"}
+              </button>
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}

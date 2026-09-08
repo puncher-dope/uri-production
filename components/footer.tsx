@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <Phone className="w-4 h-4 text-red-500/70" />
-                +7 (900) 127-80-47
+                +82-10-2410-0397
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <Mail className="w-4 h-4 text-red-500/70" />
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <MapPin className="w-4 h-4 text-red-500/70" />
-                Москва / онлайн
+                Южная Корея / онлайн
               </li>
             </ul>
           </div>

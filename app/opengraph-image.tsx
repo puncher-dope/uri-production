@@ -8,7 +8,7 @@ export async function GET() {
       <div
         style={{
           fontSize: 128,
-          background: 'linear-gradient(to right, #000000, #1a1a1a)',
+          background: 'linear-gradient(135deg, #321d27, #ed3f52, #f4a62a)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -20,10 +20,10 @@ export async function GET() {
           fontFamily: 'system-ui',
         }}
       >
-        <div style={{ fontSize: 72, marginBottom: '20px' }}>🚗</div>
-        <div>HAN EXPORT</div>
+        <div style={{ fontSize: 72, marginBottom: '20px' }}>UP</div>
+        <div>URI PRODUCTION</div>
         <div style={{ fontSize: 40, marginTop: '20px' }}>
-          Экспорт авто из Кореи в Россию
+          SMM-агентство полного цикла
         </div>
       </div>
     ),

@@ -5,11 +5,11 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://uri-production.ru'),
   title: 'URI Production — SMM-агентство полного цикла',
   description: 'Стратегия, упаковка, съёмка и монтаж видео для брендов, которые хотят расти в социальных сетях.',
   keywords: 'SMM агентство, контент, продвижение, съёмка видео, URI Production',
   authors: [{ name: 'URI Production' }],
-  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://uri-production.ru',
@@ -42,6 +42,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: 'dark light',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -57,6 +64,10 @@ export default function RootLayout({
             'name': 'URI Production',
             'url': 'https://uri-production.ru',
             'description': 'SMM-агентство полного цикла',
+            'email': 'hello@uri-production.ru',
+            'telephone': '+82-10-2410-0397',
+            'areaServed': 'Worldwide',
+            'serviceType': ['SMM', 'Контент-маркетинг', 'Продакшн видео'],
             'sameAs': [],
             'contactPoint': {
               '@type': 'ContactPoint',

@@ -31,7 +31,7 @@ const packages = [
   },
 ];
 
-const tabs = ["Все пакеты", "1 месяц"];
+const tabs = "Все пакеты";
 
 export default function CatalogSection() {
   const ref = useRef(null);
@@ -71,19 +71,12 @@ export default function CatalogSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center gap-2 mb-10 flex-wrap"
         >
-          {tabs.map((tab) => (
             <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                activeTab === tab
-                  ? "bg-red-600 text-white shadow-lg shadow-red-600/25"
-                  : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
-              }`}
+              key={tabs}
+              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-red-600 text-white shadow-lg shadow-red-600/25`}
             >
-              {tab}
+              {tabs}
             </button>
-          ))}
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6">

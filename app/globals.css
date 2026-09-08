@@ -30,6 +30,136 @@
     --chart-4: 0 0% 30%;
     --chart-5: 0 0% 15%;
   }
+
+  html.light {
+    --background: 24 100% 97%;
+    --foreground: 345 32% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 345 32% 14%;
+    --muted-foreground: 345 14% 42%;
+    --border: 18 38% 86%;
+  }
+
+  html.light body {
+    background:
+      radial-gradient(circle at 8% 8%, rgba(255, 116, 97, 0.15), transparent 28rem),
+      radial-gradient(circle at 92% 18%, rgba(255, 196, 92, 0.16), transparent 24rem),
+      #fff8f3 !important;
+    color: #321d27 !important;
+  }
+
+  html.light #hero {
+    background:
+      radial-gradient(circle at 78% 28%, rgba(255, 178, 80, 0.2), transparent 23rem),
+      linear-gradient(135deg, #fff8f3 0%, #ffe9df 52%, #fff5d9 100%);
+  }
+
+  html.light #hero > div:nth-child(2),
+  html.light #hero > div:nth-child(3),
+  html.light #hero > div:nth-child(4) {
+    display: none !important;
+  }
+
+  html.light #services,
+  html.light #advantages,
+  html.light #contact {
+    background-color: transparent !important;
+  }
+
+  html.light #catalog > .bg-gradient-to-b,
+  html.light #process > .bg-gradient-to-b {
+    background-image: linear-gradient(180deg, #fff8f3, #fff0e8, #fff8f3) !important;
+  }
+
+  html.light .bg-black,
+  html.light .bg-\[\#050505\] {
+    background-color: #fff8f3 !important;
+  }
+
+  html.light .bg-\[\#080808\],
+  html.light .bg-\[\#0a0a0a\] {
+    background-color: #fff0e8 !important;
+  }
+
+  html.light .bg-black\/95 {
+    background-color: rgba(255, 248, 243, 0.97) !important;
+  }
+
+  html.light .text-white {
+    color: #321d27 !important;
+  }
+
+  html.light .text-gray-300 {
+    color: #5a3d48 !important;
+  }
+
+  html.light .text-gray-400 {
+    color: #765966 !important;
+  }
+
+  html.light .text-gray-500,
+  html.light .text-gray-600 {
+    color: #947580 !important;
+  }
+
+  html.light [class*="border-white"] {
+    border-color: rgba(193, 91, 80, 0.2) !important;
+  }
+
+  html.light [class*="bg-white\/\[0\.0"] {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  html.light header.bg-black\/90 {
+    background-color: rgba(255, 248, 243, 0.88) !important;
+    border-color: rgba(193, 91, 80, 0.18) !important;
+  }
+
+  html.light .bg-red-600 {
+    background-color: #f0443e !important;
+  }
+
+  html.light .hover\:bg-red-700:hover {
+    background-color: #d93638 !important;
+  }
+
+  html.light .text-red-400,
+  html.light .text-red-500 {
+    color: #e04445 !important;
+  }
+
+  html.light .border-red-600\/20,
+  html.light .border-red-600\/30,
+  html.light .border-red-600\/50 {
+    border-color: rgba(240, 68, 62, 0.3) !important;
+  }
+
+  html.light .bg-red-600\/10,
+  html.light .bg-red-600\/15,
+  html.light .bg-red-600\/\[0\.05\] {
+    background-color: rgba(240, 68, 62, 0.1) !important;
+  }
+
+  html.light .text-gradient {
+    background-image: linear-gradient(135deg, #ed3f52, #ff7654, #f4a62a);
+  }
+
+  html.light .shadow-red-900\/10 {
+    --tw-shadow-color: rgba(224, 68, 69, 0.14);
+  }
+
+  html.light input,
+  html.light textarea,
+  html.light select {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    color: #321d27 !important;
+    border-color: rgba(193, 91, 80, 0.22) !important;
+  }
+
+  html.light input::placeholder,
+  html.light textarea::placeholder {
+    color: #b18d96 !important;
+  }
 }
 
 @layer base {
@@ -41,6 +171,11 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+
+  :focus-visible {
+    outline: 3px solid #f0443e;
+    outline-offset: 3px;
   }
 }
 
