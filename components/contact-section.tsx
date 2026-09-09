@@ -18,9 +18,6 @@ export default function ContactSection() {
     <section id="contact" className="relative py-24 lg:py-32 bg-black overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
 
-      {/* Decorative */}
-      <div className="absolute -left-32 bottom-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,18 +47,21 @@ export default function ContactSection() {
             {[
               {
                 icon: Phone,
+                image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=240",
                 label: "Телефон",
                 value: "+82-10-2410-0397",
                 sublabel: "Пн-Пт: 10:00 — 19:00",
               },
               {
                 icon: Mail,
+                image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=240",
                 label: "Email",
                 value: "hello@uri-production.ru",
                 sublabel: "Ответим в течение часа",
               },
               {
                 icon: MapPin,
+                image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=240",
                 label: "Формат работы",
                 value: "Южная Корея / онлайн",
                 sublabel: "Работаем по всей Южной Корее и онлайн с клиентами по всему миру",
@@ -71,8 +71,11 @@ export default function ContactSection() {
                 key={item.label}
                 className="flex items-start gap-4 p-4 rounded-xl border border-white/[0.06] bg-white/[0.02]"
               >
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-orange-500" />
+                <div
+                  className="w-10 h-10 rounded-lg overflow-hidden border border-orange-500/30 flex items-center justify-center flex-shrink-0 bg-black/40"
+                  style={{ backgroundImage: `linear-gradient(rgba(18, 12, 8, 0.5), rgba(18, 12, 8, 0.5)), url('${item.image}')`, backgroundSize: "cover", backgroundPosition: "center" }}
+                >
+                  <item.icon className="w-5 h-5 text-orange-400" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">{item.label}</div>

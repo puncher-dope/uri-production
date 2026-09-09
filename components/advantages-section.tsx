@@ -14,31 +14,37 @@ import {
 const advantages = [
   {
     icon: Globe,
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Контент под ключ",
     description: "Одна команда отвечает за стратегию, съёмку, монтаж и публикацию.",
   },
   {
     icon: Banknote,
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Понятный результат",
     description: "Связываем креатив с задачами бизнеса, а не гонимся за охватами ради охватов.",
   },
   {
     icon: Clock,
+    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Скорость запуска",
     description: "Быстро тестируем идеи и выпускаем контент регулярно, без долгих согласований.",
   },
   {
     icon: Video,
+    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Видео, которые смотрят",
     description: "Динамичные ролики с сильным хуком, сценарием и понятным призывом к действию.",
   },
   {
     icon: MapPin,
+    image: "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Ваша ниша — наша задача",
     description: "Погружаемся в специфику бизнеса и говорим с аудиторией на одном языке.",
   },
   {
     icon: Headphones,
+    image: "https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=320",
     title: "Прозрачная коммуникация",
     description: "Вы всегда знаете, что в работе, на каком этапе проект и какой следующий шаг.",
   },
@@ -51,9 +57,6 @@ export default function AdvantagesSection() {
   return (
     <section id="advantages" className="relative py-24 lg:py-32 bg-black overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
-
-      {/* Decorative red glow */}
-      <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -97,15 +100,26 @@ export default function AdvantagesSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-                className="group p-5 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:border-orange-500/30 hover:bg-orange-500/[0.05] transition-all duration-500"
+                className="group relative overflow-hidden p-5 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:border-orange-500/30 transition-all duration-500"
               >
-                <adv.icon className="w-8 h-8 text-orange-500 mb-3 group-hover:scale-110 transition-transform duration-300" />
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                  style={{ backgroundImage: `url('${adv.image}')` }}
+                />
+                <div className="relative z-10">
+                  <div className="w-10 h-10 rounded-xl overflow-hidden mb-3 border border-orange-500/30 bg-black/30">
+                    <div
+                      className="w-full h-full bg-cover bg-center"
+                      style={{ backgroundImage: `url('${adv.image}')` }}
+                    />
+                  </div>
                 <h3 className="text-white font-semibold mb-2 group-hover:text-orange-400 transition-colors">
                   {adv.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
                   {adv.description}
                 </p>
+                </div>
               </motion.div>
             ))}
           </div>
