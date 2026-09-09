@@ -44,7 +44,7 @@ export default function CatalogSection() {
     <section id="catalog" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
@@ -53,7 +53,7 @@ export default function CatalogSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-red-500 text-sm font-semibold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-semibold tracking-widest uppercase">
             Пакеты услуг
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3">
@@ -73,7 +73,7 @@ export default function CatalogSection() {
         >
             <button
               key={tabs}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-red-600 text-white shadow-lg shadow-red-600/25`}
+              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-orange-500 text-white shadow-lg shadow-orange-500/25`}
             >
               {tabs}
             </button>
@@ -88,19 +88,19 @@ export default function CatalogSection() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className={`group relative bg-white/[0.03] border rounded-2xl p-6 lg:p-8 hover:border-red-600/50 transition-all duration-500 ${i === 1 ? "border-red-600/50 shadow-xl shadow-red-900/10" : "border-white/[0.06]"}`}
+              className={`group relative bg-white/[0.03] border rounded-2xl p-6 lg:p-8 hover:border-orange-500/50 transition-all duration-500 ${i === 1 ? "border-orange-500/50 shadow-xl shadow-orange-500/20" : "border-white/[0.06]"}`}
             >
-              <span className="inline-flex bg-red-600/15 text-red-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">{pack.tag}</span>
+              <span className="inline-flex bg-orange-500/15 text-orange-500 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">{pack.tag}</span>
               <h3 className="text-2xl font-semibold text-white mt-5">{pack.name}</h3>
               <p className="text-gray-500 text-sm mt-1">{pack.period}</p>
               <ul className="space-y-3 mt-6 min-h-[180px]">
-                {pack.features.map((feature) => <li key={feature} className="flex gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-red-500 mt-0.5 shrink-0" />{feature}</li>)}
+                {pack.features.map((feature) => <li key={feature} className="flex gap-2 text-sm text-gray-300"><Check className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />{feature}</li>)}
               </ul>
               <div className="border-t border-white/[0.08] pt-5 mt-5">
                 <div className="text-2xl font-bold text-white">{pack.price}</div>
-                <div className="text-sm text-red-400 mt-1">{pack.monthly} / месяц</div>
+                <div className="text-sm text-orange-500 mt-1">{pack.monthly} / месяц</div>
               </div>
-              <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-medium transition-colors">Обсудить пакет <ChevronRight className="w-4 h-4" /></a>
+              <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 font-medium transition-colors">Обсудить пакет <ChevronRight className="w-4 h-4" /></a>
             </motion.div>
           ))}
         </div>
@@ -113,7 +113,7 @@ export default function CatalogSection() {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 font-medium transition-colors"
           >
             Не знаете, какой пакет выбрать? Поможем подобрать решение
             <ChevronRight className="w-4 h-4" />

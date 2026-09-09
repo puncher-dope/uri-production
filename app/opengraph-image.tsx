@@ -8,7 +8,7 @@ export async function GET() {
       <div
         style={{
           fontSize: 128,
-          background: 'linear-gradient(135deg, #321d27, #ed3f52, #f4a62a)',
+          background: 'linear-gradient(135deg, #17110d, #ff7420, #ffb15c)',
           width: '100%',
           height: '100%',
           display: 'flex',

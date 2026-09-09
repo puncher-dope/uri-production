@@ -43,7 +43,7 @@ export default function ProcessSection() {
   return (
     <section id="process" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#080808] to-black" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-600/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
@@ -52,7 +52,7 @@ export default function ProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 text-sm font-semibold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-semibold tracking-widest uppercase">
             Как мы работаем
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3">
@@ -69,13 +69,13 @@ export default function ProcessSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative"
             >
-              <div className="relative p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-red-600/30 transition-all duration-500">
-                <span className="text-5xl font-black text-red-600/10 group-hover:text-red-600/20 transition-colors duration-500 absolute top-3 right-4">
+              <div className="relative p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-orange-500/30 transition-all duration-500">
+                <span className="text-5xl font-black text-orange-500/10 group-hover:text-orange-500/20 transition-colors duration-500 absolute top-3 right-4">
                   {step.step}
                 </span>
                 <div className="relative z-10">
-                  <span className="text-red-500 font-bold text-lg">{step.step}</span>
-                  <h3 className="text-white font-semibold text-lg mt-2 mb-2 group-hover:text-red-400 transition-colors">
+                  <span className="text-orange-500 font-bold text-lg">{step.step}</span>
+                  <h3 className="text-white font-semibold text-lg mt-2 mb-2 group-hover:text-orange-400 transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">
@@ -86,7 +86,7 @@ export default function ProcessSection() {
 
               {/* Connector line for desktop */}
               {i < steps.length - 1 && i % 3 !== 2 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-gradient-to-r from-red-600/30 to-transparent" />
+                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-gradient-to-r from-orange-500/30 to-transparent" />
               )}
             </motion.div>
           ))}

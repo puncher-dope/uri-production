@@ -57,7 +57,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="relative py-24 lg:py-32 bg-black overflow-hidden">
       {/* Subtle background accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
@@ -66,7 +66,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 text-sm font-semibold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-semibold tracking-widest uppercase">
             Наши услуги
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3">
@@ -84,15 +84,15 @@ export default function ServicesSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] rounded-2xl p-6 lg:p-8 hover:border-red-600/30 transition-all duration-500 hover:shadow-lg hover:shadow-red-900/10"
+              className="group relative bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.06] rounded-2xl p-6 lg:p-8 hover:border-orange-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-orange-500/20"
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-red-600/0 to-red-600/0 group-hover:from-red-600/5 group-hover:to-transparent transition-all duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/10 group-hover:to-transparent transition-all duration-500" />
 
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-red-600/10 border border-red-600/20 flex items-center justify-center mb-5 group-hover:bg-red-600/20 group-hover:border-red-600/40 transition-all duration-500">
-                  <service.icon className="w-6 h-6 text-red-500" />
+                <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-5 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all duration-500">
+                  <service.icon className="w-6 h-6 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed text-sm">

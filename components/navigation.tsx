@@ -43,7 +43,7 @@ export default function Navigation() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-xl shadow-lg shadow-red-900/10 border-b border-red-900/20"
+            ? "bg-black/90 backdrop-blur-xl shadow-lg shadow-orange-900/10 border-b border-orange-900/20"
             : "bg-transparent"
         }`}
       >
@@ -51,11 +51,11 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <a href="#hero" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 flex items-center justify-center">
-                <div className="absolute inset-0 bg-red-600 rounded-lg rotate-45 group-hover:rotate-[50deg] transition-transform duration-500" />
+                <div className="absolute inset-0 bg-orange-500 rounded-lg rotate-45 group-hover:rotate-[50deg] transition-transform duration-500" />
                 <span className="relative font-bold text-white text-sm">UP</span>
               </div>
               <div>
-                <span className="text-xl font-bold text-white tracking-wider">URI<span className="text-red-500"> PRODUCTION</span></span>
+                <span className="text-xl font-bold text-white tracking-wider">URI<span className="text-orange-500"> PRODUCTION</span></span>
               </div>
             </a>
 
@@ -67,19 +67,19 @@ export default function Navigation() {
                   className="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-300 relative group"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-red-500 group-hover:w-3/4 transition-all duration-300" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-3/4 transition-all duration-300" />
                 </a>
               ))}
             </nav>
 
             <div className="hidden lg:flex items-center gap-4">
               <a href="mailto:hello@uri-production.ru" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm">
-                <Mail className="w-4 h-4 text-red-500" />
+                <Mail className="w-4 h-4 text-orange-500" />
                 <span>hello@uri-production.ru</span>
               </a>
               <a
                 href="#contact"
-                className="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-red-600/25 flex items-center gap-1"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 flex items-center gap-1"
               >
                 Обсудить проект <ChevronRight className="w-4 h-4" />
               </a>
@@ -88,7 +88,7 @@ export default function Navigation() {
                 onClick={toggleTheme}
                 aria-label={lightMode ? "Включить тёмный режим" : "Включить светлый режим"}
                 title={lightMode ? "Тёмный режим" : "Светлый режим"}
-                className="w-10 h-10 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-red-500/50 flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-lg border border-white/10 text-gray-300 hover:text-white hover:border-orange-500/50 flex items-center justify-center transition-colors"
               >
                 {lightMode ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
               </button>
@@ -120,7 +120,7 @@ export default function Navigation() {
                 onClick={toggleTheme}
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
               >
-                {lightMode ? <Moon className="w-5 h-5 text-red-500" /> : <Sun className="w-5 h-5 text-red-500" />}
+                {lightMode ? <Moon className="w-5 h-5 text-orange-500" /> : <Sun className="w-5 h-5 text-orange-500" />}
                 {lightMode ? "Тёмный режим" : "Светлый режим"}
               </button>
               {navLinks.map((link, i) => (
@@ -131,7 +131,7 @@ export default function Navigation() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="text-2xl font-semibold text-white hover:text-red-500 transition-colors"
+                  className="text-2xl font-semibold text-white hover:text-orange-500 transition-colors"
                 >
                   {link.label}
                 </motion.a>
@@ -140,7 +140,7 @@ export default function Navigation() {
                 href="mailto:hello@uri-production.ru"
                 className="flex items-center gap-2 text-gray-300 mt-4"
               >
-                <Mail className="w-5 h-5 text-red-500" />
+                <Mail className="w-5 h-5 text-orange-500" />
                 hello@uri-production.ru
               </a>
             </nav>

@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <a href="#hero" className="flex items-center gap-3 mb-4">
               <div className="relative w-8 h-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-red-600 rounded-md rotate-45" />
+                <div className="absolute inset-0 bg-orange-500 rounded-md rotate-45" />
                 <span className="relative font-bold text-white text-xs">UP</span>
               </div>
               <span className="text-lg font-bold text-white tracking-wider">
-                URI<span className="text-red-500"> PRODUCTION</span>
+                URI<span className="text-orange-500"> PRODUCTION</span>
               </span>
             </a>
             <p className="text-gray-500 text-sm leading-relaxed">
@@ -54,7 +54,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-gray-500 hover:text-red-400 text-sm transition-colors duration-300"
+                      className="text-gray-500 hover:text-orange-400 text-sm transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -69,15 +69,15 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Контакты</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-500 text-sm">
-                <Phone className="w-4 h-4 text-red-500/70" />
+                <Phone className="w-4 h-4 text-orange-500/70" />
                 +82-10-2410-0397
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
-                <Mail className="w-4 h-4 text-red-500/70" />
+                <Mail className="w-4 h-4 text-orange-500/70" />
                 hello@uri-production.ru
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
-                <MapPin className="w-4 h-4 text-red-500/70" />
+                <MapPin className="w-4 h-4 text-orange-500/70" />
                 Южная Корея / онлайн
               </li>
             </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
           </p>
           <a
             href="#hero"
-            className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-gray-500 hover:text-red-400 hover:border-red-600/30 transition-all duration-300"
+            className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-gray-500 hover:text-orange-400 hover:border-orange-500/30 transition-all duration-300"
           >
             <ArrowUp className="w-4 h-4" />
           </a>

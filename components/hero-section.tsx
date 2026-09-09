@@ -18,16 +18,16 @@ export default function HeroSection() {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
-      <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 via-transparent to-red-900/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-900/20 via-transparent to-orange-900/10" />
 
       {/* Decorative elements */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/15 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-red-800/15 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-orange-800/15 rounded-full blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -48,10 +48,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-red-600/10 border border-red-600/30 rounded-full px-4 py-1.5 mb-6"
+            className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 rounded-full px-4 py-1.5 mb-6"
           >
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            <span className="text-red-400 text-sm font-medium">SMM-агентство полного цикла</span>
+            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+            <span className="text-orange-500 text-sm font-medium">SMM-агентство полного цикла</span>
           </motion.div>
 
           <motion.h1
@@ -85,14 +85,14 @@ export default function HeroSection() {
           >
             <a
               href="#catalog"
-              className="group inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-red-600/30 hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5"
             >
               Выбрать пакет
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-red-500/50 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-white/5"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-orange-500/50 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-white/5"
             >
               Что мы делаем
             </a>
@@ -111,7 +111,7 @@ export default function HeroSection() {
               { value: "98%", label: "клиентов рекомендуют" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-bold text-red-500">{stat.value}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-orange-500">{stat.value}</div>
                 <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
               </div>
             ))}
@@ -125,7 +125,7 @@ export default function HeroSection() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <ChevronDown className="w-6 h-6 text-red-500/60" />
+        <ChevronDown className="w-6 h-6 text-orange-500/60" />
       </motion.div>
     </section>
   );
